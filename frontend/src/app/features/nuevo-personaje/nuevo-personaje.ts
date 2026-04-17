@@ -9,7 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   standalone:true,
   imports: [CommonModule, FormsModule],
   templateUrl: './nuevo-personaje.html',
-  styleUrl: './nuevo-personaje.css',
+  styleUrl: './nuevo-personaje.css', 
 })
 export class NuevoPersonaje {
  // Decoradores Input para recibir datos del componente padre
