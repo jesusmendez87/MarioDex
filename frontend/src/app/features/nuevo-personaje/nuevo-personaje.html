@@ -1,0 +1,11 @@
+<form inputmode="text" class="form-group mb-3">
+  <label for="nombre" class="form-label">Datos del Pokémon</label>
+     <br>
+  <input type="text" id="nombre" class="form-control" [(ngModel)]="NuevoPersonaje.nombre" name="nombre" placeholder="Nombre" />
+   <br>
+  <input type="text" class="form-control" [(ngModel)]="NuevoPersonaje.tipo" name="tipo" placeholder="Tipo del Pokémon" />
+     <br>
+  <input type="text" class="form-control" [(ngModel)]="NuevoPersonaje.nivel" name="nivel" placeholder="nivel" />
+     <br>
+  <input type="submit" class="btn btn-primary mt-3" value="Agregar Personaje" (click)="cargarPersonaje()" />
+</form>

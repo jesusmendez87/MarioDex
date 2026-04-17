@@ -1,0 +1,55 @@
+<div class="container mt-4">
+  <button class="btn btn-primary" (click)="abrirModal()">
+    Nuevo Personaje MarioDex
+  </button>
+</div>
+ 
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let p of personajes; trackBy: trackByPersonaje">
+      <app-item-personaje
+        [nombre]="p.nombre"
+        [tipo]="p.tipo"
+        [urlImagen]="p.urlImagen || ''"
+        [nivel]="p.nivel || ''"
+         >
+      </app-item-personaje>
+    </div>
+  </div>
+ 
+    
+   
+  
+
+
+<!-- MODAL -->
+<div class="modal fade show d-block" tabindex="-1" *ngIf="modalAbierto">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nuevo Pokémon</h5>
+        <button title="Cerrar" type="button" class="btn-close" (click)="cerrarModal()"></button>
+      </div>
+
+      <div class="modal-body">
+
+    <app-nuevo-personaje
+ 
+  (cerrar)="cerrarModal()"
+  (pokemonGuardado)="loadpersonajes()">
+
+    </app-nuevo-personaje>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="cerrarModal()">Cancelar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FONDO OSCURO -->
+<!-- <div class="modal-backdrop fade show" *ngIf="modalAbierto"></div> -->
+
