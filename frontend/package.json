@@ -23,17 +23,16 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^20.3.0",
+    "@angular/common": "^20.3.19",
     "@angular/compiler": "^20.3.0",
-    "@angular/core": "^20.3.0",
-    "@angular/forms": "^20.3.0",
+    "@angular/core": "^20.3.19",
+    "@angular/forms": "^20.3.19",
     "@angular/platform-browser": "^20.3.0",
-    "@angular/router": "^20.3.0",
+    "@angular/router": "^20.3.19",
     "dotenv": "^17.2.3",
     "mongoose": "^9.1.5",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone": "^0.3.4",
+    "tslib": "^2.8.1",
     "zone.js": "^0.15.1"
   },
   "devDependencies": {

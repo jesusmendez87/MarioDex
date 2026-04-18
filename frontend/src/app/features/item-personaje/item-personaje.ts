@@ -1,7 +1,6 @@
 
-import { Component, Input, Output, EventEmitter } from '@angular/core';
- import { MarioDexPage } from '../mario-dex-page/mario-dex-page';
-import { NuevoPersonaje } from '../nuevo-personaje/nuevo-personaje';
+import { Component, Input} from '@angular/core';
+ 
 @Component({
   selector: 'app-item-personaje',
   standalone:true,

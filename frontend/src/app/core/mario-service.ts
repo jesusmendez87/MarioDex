@@ -13,11 +13,11 @@ export class MarioService {
   constructor(private http: HttpClient) {}
 
   getPersonajes(): Observable<any> {
-    return this.http.get('http://localhost:4000/api/personajes');
+    return this.http.get('http://mariodex.test/api/personajes');
   }
 
   addPersonajes(Personaje: PersonajeResponse): Observable<PersonajeResponse> {
-    return this.http.post<PersonajeResponse>('http://localhost:4000/api/personaje', Personaje);
+    return this.http.post<PersonajeResponse>('http://mariodex.test/api/personajes', Personaje);
   }
 
 
