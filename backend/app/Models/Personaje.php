@@ -11,7 +11,7 @@ class Personaje extends Eloquent
     protected $fillable = [
         'nombre',
         'tipo',
-        'poder',
+        'nivel',
         'mundo',
     ];
 }

@@ -6,7 +6,7 @@ import { NuevoPersonaje } from "./features/nuevo-personaje/nuevo-personaje";
 
 @Component({
   selector: 'app-root',
-  imports: [ MarioDexPage, NuevoPersonaje],
+  imports: [ MarioDexPage],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

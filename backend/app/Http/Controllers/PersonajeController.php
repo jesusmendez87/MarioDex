@@ -11,6 +11,7 @@ class PersonajeController extends Controller
  public function index()
     {
         return Personaje::all();
+        
     }
 
 
@@ -19,8 +20,8 @@ public function store(Request $request)
     $validated = $request->validate([
         'nombre' => 'required|string|max:255',
         'tipo' => 'required|string|max:255',
-        'poder' => 'required|integer|min:1|max:100',
-        'mundo' => 'required|string|max:255',
+        'nivel' => 'required|integer|min:1|max:100',
+        'mundo' => 'string|max:255',
     ]);
 
     $personaje = Personaje::create($validated);
@@ -55,7 +56,7 @@ public function update(Request $request, Personaje $personaje)
 
 public function destroy(Personaje $personaje)
 {
-    $personaje->delete();
+    $personaje->delete('nombre');
 
     return response()->json([
         'message' => 'Personaje eliminado correctamente'

@@ -12,9 +12,7 @@ export class ItemPersonaje {
 
    @Input() nombre: string = '';
   @Input() tipo: string = '';
-  @Input() urlImagen: string = '';
   @Input() nivel: string = '';
-
-
+  @Input() mundo: string = '';
 
 }

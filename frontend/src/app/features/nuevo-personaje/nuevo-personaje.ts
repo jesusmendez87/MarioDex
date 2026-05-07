@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { PersonajeResponse } from './../../models/personaje';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
  
+
 @Component({
   selector: 'app-nuevo-personaje',
   standalone:true,
@@ -14,7 +15,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class NuevoPersonaje {
  // Decoradores Input para recibir datos del componente padre
   NuevoPersonaje: PersonajeResponse = {nombre: '', tipo: '', nivel: ''};
-  @Output() pokemonGuardado = new EventEmitter<void>();
+  @Output() personajeGuardado = new EventEmitter<void>();
   @Output() cerrar = new EventEmitter<void>();
 
   constructor(private personajeResponse : MarioService) {
@@ -24,22 +25,22 @@ export class NuevoPersonaje {
 
 cargarPersonaje() {
 
-  if (!this.NuevoPersonaje.nombre || !this.NuevoPersonaje.tipo) {
-    alert('Debes completar el nombre y tipo del Pokémon');
+  if (!this.NuevoPersonaje.nombre || !this.NuevoPersonaje.tipo || !this.NuevoPersonaje.nivel ) {
+    alert('Debes completar el nombre, tipo, nivel y mundo del Personaje');
     return;
   }
 
   this.personajeResponse.addPersonajes(this.NuevoPersonaje).subscribe({
     next: res => {
-      console.log('Pokemon agregado', res);
-      this.NuevoPersonaje = { nombre: '', tipo: '', nivel: '' };
+      console.log('Personaje agregado', res);
+      this.NuevoPersonaje = { nombre: '', tipo: '', nivel: '' }; // Reiniciar el formulario
 
-      alert('Pokémon agregado con éxito');
-      this.pokemonGuardado.emit();
+      alert('Personaje agregado con éxito');
+      this.personajeGuardado.emit();
       this.cerrar.emit();
     },
     error: err => {
-      console.error('Error al agregar Pokémon', err);
+      console.error('Error al agregar personaje', err);
     }
   });
 }
