@@ -36,7 +36,7 @@ return [
     'mongodb' => [
     'driver'   => 'mongodb',
     'dsn'      => env('MONGO_URI'),
-    'database' => env('DB_DATABASE, 'parcial'),
+    'database' => env('DB_DATABASE', 'parcial'),
 ],
 
 
