@@ -12,8 +12,6 @@ APP_URL=${APP_URL:-http://localhost}
 
 
 DB_CONNECTION=${DB_CONNECTION:-mongodb}
-DB_HOST=${DB_HOST:-}
-DB_PORT=${DB_PORT:-27017}
 DB_DATABASE=${DB_DATABASE:-}
 
 
