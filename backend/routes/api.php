@@ -9,6 +9,8 @@ use App\Models\Personaje;
  *              Rutas API de la aplicación            *
  *                                                   *
  *****************************************************/
+
+//Rutas de Personajes
 Route::apiResource('personajes', App\Http\Controllers\PersonajeController::class);
  
  

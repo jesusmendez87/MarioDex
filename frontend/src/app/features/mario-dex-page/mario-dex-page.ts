@@ -29,7 +29,7 @@ export class MarioDexPage implements OnInit {
     this.loadpersonajes();
   }
 
-
+  // carga personajes
   loadpersonajes(){
     this.PersonajeService.getPersonajes().subscribe({
       next: (data: PersonajeResponse[]) => {

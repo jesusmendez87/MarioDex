@@ -1,4 +1,3 @@
-import { MarioService } from './../../core/mario-service';
 import { MarioDexPage } from './mario-dex-page';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -9,7 +8,8 @@ let component:MarioDexPage;
 let fixture:ComponentFixture<MarioDexPage>;
 let verPersonajesMock : any;
 
-beforeEach(async()=>{
+beforeEach(async()=>{ 
+  // Configuración de las pruebas
     await TestBed.configureTestingModule({
       imports: [HttpClientTestingModule]
     })
@@ -22,7 +22,6 @@ beforeEach(async()=>{
 
 
    it('debería listar personajes', () => {
-     
     verPersonajesMock = {
         addpersonaje: jasmine.createSpy().and.returnValue(of([`Mario`,`Heroe`,10],[`Luigi`,`Heroe`,9]))
     }

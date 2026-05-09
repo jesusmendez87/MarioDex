@@ -4,7 +4,7 @@ import { Personaje } from './personaje';
 
 describe('Personaje', () => {
 
-  it('debe modelar personaje correctamente', () => {
+  it('debe crear personaje correctamente', () => {
     const $nombre = 'Mario';
     const $tipo = 'Heroe';
     const $nivel = '10';

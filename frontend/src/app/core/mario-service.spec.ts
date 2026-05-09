@@ -66,7 +66,7 @@ describe('MarioService', () => {
       expect(response).toEqual(mockResponse);
     });
 
-    const req = httpMock.expectOne('http://mariodex.test/api/personajes');
+    const req = httpMock.expectOne('https://mariodex.onrender.com/api/personajes');
     expect(req.request.method).toEqual('GET');
     req.flush(mockResponse);
   });

@@ -9,8 +9,8 @@ import { Component, Input} from '@angular/core';
   styleUrl: './item-personaje.css',
 })
 export class ItemPersonaje {
-
-   @Input() nombre: string = '';
+  // Propiedades
+  @Input() nombre: string = '';
   @Input() tipo: string = '';
   @Input() nivel: string = '';
   @Input() mundo: string = '';
