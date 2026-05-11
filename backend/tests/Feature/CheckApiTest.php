@@ -7,7 +7,7 @@ it('Devuelve lista de personajes', function () {
 // comprueba endpoint /api/personajes
  
     Personaje::create([
-        'nombre' => 'Mario',
+        'nombre' => 'Mario',        
         'tipo' => 'Heroe',
         'nivel' => 10
     ]);

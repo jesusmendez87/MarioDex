@@ -25,17 +25,17 @@ describe('NuevoPersonaje', () => {
   });
 
   it('debe crear personaje correctamente', () => {
-    //Preparar datos
+    //Prepara los datos
     component.NuevoPersonaje = {
       nombre: 'Mario',
       tipo: 'Heroe',
       nivel: '10',
     };
 
-    // Ejecutar método
+    // Ejecuta el método
     component.cargarPersonaje();
 
-    // Verificar llamada al servicio
+    // Verifica la llamada al servicio
     expect(marioServiceMock.addPersonajes).toHaveBeenCalledWith({
       nombre: 'Mario',
       tipo: 'Heroe',
@@ -44,7 +44,7 @@ describe('NuevoPersonaje', () => {
   });
 
   it('debe mostrar alerta si faltan campos', () => {
-    spyOn(window, 'alert'); // espiar la funcion alert
+    spyOn(window, 'alert'); // espia la funcion alert
     component.NuevoPersonaje = { //simulamos falta de nombre
       nombre: '',
       tipo: 'Heroe',
