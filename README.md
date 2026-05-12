@@ -19,6 +19,7 @@ Git & GitHub
 Composer
 npm
 Docker (opcional)
+
 📂 Estructura del proyecto
 mariodex/
 │
