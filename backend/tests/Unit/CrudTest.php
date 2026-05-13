@@ -50,7 +50,7 @@ test('elimina personaje por nombre', function () {
     ]);
     });
 
-    test('crea un personaje correctamente', function () {
+test('crea un personaje correctamente', function () {
 
         Route::post('/api/personajes', function () {
             return response()->json([
@@ -110,6 +110,9 @@ test('Actualiza un personaje correctamente', function () {
             'nivel'  => 10,
         ]
     ]);
+
+
+
 });
  
 

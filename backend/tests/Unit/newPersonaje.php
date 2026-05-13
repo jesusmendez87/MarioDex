@@ -1,5 +1,7 @@
 <?php
 
-test('creación nuevo personaje', function () {
+test('testing test', function () {
     expect(true)->toBeTrue();
 });
+
+

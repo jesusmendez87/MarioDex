@@ -28,3 +28,18 @@ it('Devuelve lista de personajes', function () {
         'nombre' => 'Luigi'
     ]);
 });
+
+
+
+it('Validación datos personaje', function () {
+
+    $response = $this->postJson('/api/personajes', [
+        'nombre' => 'Mario',
+        'tipo' => 'Heroe',
+        'nivel' => 999,
+    ]);
+
+    $response
+        ->assertStatus(422)
+        ->assertJsonValidationErrors(['nivel']);
+});

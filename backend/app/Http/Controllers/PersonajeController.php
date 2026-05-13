@@ -42,7 +42,7 @@ public function update(Request $request, Personaje $personaje)
     $validated = $request->validate([
         'nombre' => 'sometimes|required|string|max:255',
         'tipo' => 'sometimes|required|string|max:255',
-        'poder' => 'sometimes|required|integer|min:1|max:100',
+        'nivel' => 'sometimes|required|integer|min:1|max:100',
         'mundo' => 'sometimes|required|string|max:255',
     ]);
 
@@ -62,4 +62,6 @@ public function destroy(Personaje $personaje)
         'message' => 'Personaje eliminado correctamente'
     ], 200);
 }
+
+
 }
