@@ -23,7 +23,7 @@ test('Devuelve lista de personajes con estructura correcta', function () {
         ];
     })    ;
 
-    $response = $this->getJson('/api/personajes');
+    $response = $this->getJson('/api/personajes'); //mensaje de error de intelephense
 
     $response->assertStatus(200);
     $response->assertJsonIsArray();
@@ -42,7 +42,7 @@ test('elimina personaje por nombre', function () {
         ], 200);
     });
 
-    $response = $this->deleteJson('/api/personajes/fake-id-123');
+    $response = $this->deleteJson('/api/personajes/fake-id-123'); //mensaje de error de intelephense
 
     $response->assertStatus(200);
     $response->assertJson([
@@ -51,7 +51,7 @@ test('elimina personaje por nombre', function () {
     });
 
 test('crea un personaje correctamente', function () {
-
+        //simulamos la ruta que mokeamos
         Route::post('/api/personajes', function () {
             return response()->json([
                 'message' => 'Personaje creado correctamente',
@@ -63,7 +63,8 @@ test('crea un personaje correctamente', function () {
             ], 201);
         });
 
-        $response = $this->postJson('/api/personajes', [
+        $response = $this->postJson('/api/personajes', [  //mensaje de error de intelephense
+
             'nombre' => 'Mario',
             'tipo'   => 'Heroe',
             'nivel'  => 10,
@@ -81,7 +82,7 @@ test('crea un personaje correctamente', function () {
     });
 
 test('Actualiza un personaje correctamente', function () {
-
+ // simulamos la ruta que mokeamos
     Route::put('/api/personajes/{personaje}', function ($personaje) {
         return response()->json([
             'message' => 'Personaje actualizado correctamente',
@@ -93,8 +94,9 @@ test('Actualiza un personaje correctamente', function () {
             ]
         ], 200);
     });
+// simulamos el personaje a actualizar
+    $response = $this->putJson('/api/personajes/fake-id-123', [  //mensaje de error de intelephense
 
-    $response = $this->putJson('/api/personajes/fake-id-123', [
         'nombre' => 'Mario',
         'tipo'   => 'Heroe',
         'nivel'  => 10,

@@ -2,7 +2,6 @@
 
 use App\Models\Personaje;
  
-
 it('Devuelve lista de personajes', function () {
 // comprueba endpoint /api/personajes
  
@@ -32,7 +31,7 @@ it('Devuelve lista de personajes', function () {
 
 
 it('Validación datos personaje', function () {
-
+     // simulamos una respuesta de error en el parámetro nivel 
     $response = $this->postJson('/api/personajes', [
         'nombre' => 'Mario',
         'tipo' => 'Heroe',
@@ -40,6 +39,6 @@ it('Validación datos personaje', function () {
     ]);
 
     $response
-        ->assertStatus(422)
+        ->assertStatus(422) // petición no procesable
         ->assertJsonValidationErrors(['nivel']);
 });

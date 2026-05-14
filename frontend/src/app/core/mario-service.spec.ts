@@ -25,7 +25,7 @@ describe('MarioService', () => {
     httpMock.verify();
   });
 
-  it('verfica la creación del servicio', () => {
+  it('verfica la creación del servicio', () => {  // Verifica la creación del servicio  
     expect(service).toBeTruthy();
   });
 
